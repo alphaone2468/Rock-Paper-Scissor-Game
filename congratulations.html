@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Win Screen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+            background-color: #8CC461;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .trophyContainer {
+            position: relative;
+            width: 500px;
+            height: 320px;
+            background-color: #8CC461;
+            overflow: hidden;
+            flex: 5;
+            margin: 50px auto 0;
+        }
+        
+        .trophy {
+            position: absolute;
+            left: 150px;
+            top: 110px;
+        }
+        
+        .trophy img {
+            width: 200px;
+            height: 201px;
+        }
+        
+        .star img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .textContainer {
+            color: white;
+            text-transform: uppercase;
+            flex: 4;
+        }
+        
+        .hurray {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            font-size: 91px;
+            line-height: 100%;
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+        
+        .subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            font-size: 41px;
+            line-height: 100%;
+            letter-spacing: 0.1em;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .star {
+            position: absolute;
+        }
+        
+        .star-1 {
+            width: 32px;
+            height: 32px;
+            left: 110px;
+            top: 0px;
+        }
+        
+        .star-2 {
+            width: 103px;
+            height: 103px;
+            right: 70px;
+            top: 0px;
+        }
+        
+        .star-3 {
+            width: 32px;
+            height: 32px;
+            left: 110px;
+            top: 260px;
+        }
+        
+        .star-4 {
+            width: 130px;
+            height: 130px;
+            right: 10px;
+            top: 170px;
+        }
+        
+        .star-5 {
+            width: 32px;
+            height: 32px;
+            left: 180px;
+            top: 30px;
+        }
+        
+        .star-6 {
+            width: 32px;
+            height: 32px;
+            right: 30px;
+            top: 100px;
+        }
+        
+        .star-7 {
+            width: 68px;
+            height: 68px;
+            left: 65px;
+            top: 60px;
+        }
+        .star-8 {
+            width: 115px;
+            height: 115px;
+            left: 0px;
+            top: 130px;
+        }
+        .playAgainButton {
+            background-color: white;
+            color: #6B6B6B;
+            border-radius: 9px;
+            padding: 16px 50px;
+            border: 0;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 100%;
+            cursor: pointer;
+            margin-top: 30px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .controlsContainer {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .rulesButton {
+            border: 2px solid white;
+            color: white;
+            padding: 5px 10px;
+            background-color: transparent;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 21px;
+            cursor: pointer;
+        }
+        .ruleContainer {
+            position: absolute;
+            bottom: 80px;
+            right: -100px;
+        }
+        .hidden {
+            display: none;
+        }
+        .card {
+            width: 278px;
+            background-color: #004429;
+            color: white;
+            border-radius: 13px;
+            padding: 20px;
+            border: 7px solid white;
+        }
+
+        .cardHeader {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .ruleItem {
+            margin-bottom: 15px;
+            line-height: 1.2;
+            font-size: 13px;
+            display: flex;
+            align-items: flex-start;
+            text-align: start;
+        }
+
+        .bullet {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #FFD700;
+            margin-right: 10px;
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+        .closeButton {
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            width: 50px;
+            height: 50px;
+            background-color: #FF0000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+            border: 7px solid white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="trophyContainer">
+            <!-- Stars -->
+            <div class="star star-1">
+                <img src="./images/star.png" alt="star">
+            </div>
+            <div class="star star-2">
+                <img src="./images/star.png" alt="star">
+            </div>
+            <div class="star star-3">
+                <img src="./images/star.png" alt="star">
+            </div>
+            <div class="star star-4">
+                <img src="./images/star.png" alt="star">
+            </div>
+            <div class="star star-5">
+                <img src="./images/star.png" alt="star">
+            </div>
+            <div class="star star-6">
+                <img src="./images/star.png" alt="star">
+            </div>
+            <div class="star star-7">
+                <img src="./images/star.png" alt="star">
+            </div>
+            <div class="star star-8">
+                <img src="./images/star.png" alt="star">
+            </div>
+            
+            <!-- Trophy as image -->
+            <div class="trophy">
+                <img src="./images/cup.png" alt="trophy">
+            </div>
+        </div>
+        
+        <div class="textContainer">
+            <h1 class="hurray">HURRAY!!</h1>
+            <p class="subtitle">YOU WON THE GAME</p>
+            <a href="./index.html">
+                <button class="playAgainButton">Play Again</button>
+            </a>
+        </div>
+
+        <div class="ruleContainer hidden" id="rulesContainer">
+            <div class="card">
+                <div class="closeButton" onclick="handleToggleRules(1)">X</div>
+                <div class="cardHeader">Game Rules</div>
+                
+                <div class="ruleItem">
+                    <div class="bullet"></div>
+                    <p>Rock beats scissors, scissors beat paper, and paper beats rock.</p>
+                </div>
+                
+                <div class="ruleItem">
+                    <div class="bullet"></div>
+                    <p>Agree ahead of time whether you'll count off "rock, paper, scissors, shoot" or just "rock, paper, scissors.</p>
+                </div>
+                
+                <div class="ruleItem">
+                    <div class="bullet"></div>
+                    <p>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</p>
+                </div>
+                
+                <div class="ruleItem">
+                    <div class="bullet"></div>
+                    <p>If both players lay down the same hand, each player lays down another hand.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="controlsContainer">
+            <button class="rulesButton" onclick="handleToggleRules()">RULES</button>
+        </div>
+    </div>
+
+    <script>
+        function handleToggleRules(val) {
+            const container = document.getElementById("rulesContainer");
+            if (val) {
+              container.classList.add('hidden');
+            } 
+            else {
+              container.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

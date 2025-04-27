@@ -1,0 +1,392 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+.mainContainer{
+    height: 100vh;
+    width: 100vw;
+    background-color: #8CC461;
+    /* border: 2px solid peru; */
+    display: flex;
+    flex-direction: column;
+}
+.mainScoreContainer{
+    width: 100vw;
+    /* border: 10px solid red; */
+    flex:3;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+.contentContainer{
+    border: 2px solid white;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    border-radius: 13px;
+    margin-top: 2rem;
+}
+.scoreContainer{
+    /* border: 2px solid red; */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.headingContainer{
+    /* border: 5px solid white;    */
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.headingElementsContainer{
+    display: flex;
+    flex-direction: column;
+}
+.userScoreContainer{
+    border: 5px solid white;
+    width: 139px;
+    height: 128px;
+    border-radius: 9px;
+    background-color: white;
+    color: black;
+}
+.computerScoreContainer{
+    border: 5px solid white;
+    width: 139px;
+    height: 128px;
+    background-color: white;
+    color: black;
+    border-radius: 9px;
+}
+.computerScoreText{
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 10%;   
+    color: #656565; 
+    text-align: center;
+    padding: 2px;
+}
+.userScoreText{
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 10%; 
+    color: #656565;   
+    text-align: center;
+    padding: 2px 20px;
+}
+.scores{
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 68px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.choiceRulesContainer{
+    /* border: 1px solid blue; */
+    width: 100vw;
+    flex: 7;
+    display: flex;
+    align-items: center;
+}
+
+.rulesContainer{
+    /* border: 2px solid red; */
+    width: 25vw;
+    height: 367px;
+    position: relative;
+    /* display: none; */
+}
+.rulesContent{
+    width: 100%;
+    border: 2px solid gold;
+    height: 200px;
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+.card {
+    position: absolute;
+    width: 278px;
+    background-color: #004429;
+    color: white;
+    border-radius: 13px;
+    padding: 20px 20px;
+    border: 7px solid white;
+    bottom: 64vh;
+  }
+
+  .card-header {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .ruleItem {
+    margin-bottom: 15px;
+    line-height: 1.2;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bullet {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #FFD700;
+    margin-right: 10px;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: -2rem;
+    right: -1.5rem;
+    width: 50px;
+    height: 50px;
+    background-color: #FF0000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    border: 7px solid white;
+    cursor: pointer;
+  }
+
+.rulesButtonContainer{
+    position: absolute;
+      bottom: 20px;
+      right: 100px;
+      width: 60px;
+      height: 60px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.rulesButton{
+    border: 2px solid white;
+    color: white;
+    padding: 5px 10px;
+    background-color: transparent;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 21px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.choiceContainer{
+    /* border: 2px solid saddlebrown; */
+    width: 100vw;
+    display: flex;
+    /* padding-left: 40vw; */
+    padding-left: 40vw;    /*won status case*/
+}
+.playContainer {
+    position: relative;
+    width: 330px;
+    height: 290px;
+    /* display: none; */
+}
+.wonStatusContainer{
+    /* border: 2px solid pink; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    /* display: none; */
+}
+.hidden{
+    display: none;
+}
+.wonMessage{
+    font-weight: 800;
+    font-size: 39px;
+    line-height: 100%;
+    letter-spacing: 10%;
+    text-align: center;
+}
+.againstPCText{
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 10%;
+    text-align: center;
+}
+.playAgainContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 3rem;
+}
+.playAgainButton{
+    background-color: white;
+    color: #6B6B6B;
+    border-radius: 9px;
+    padding: 10px 15px;
+    border: 0px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 10%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.userChoiceContainer{
+    text-align: center;
+    position: relative;
+    z-index: 4;
+}
+.userChoiceContainer p{
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+    font-size: 17px;
+}
+.computerChoiceContainer{
+    text-align: center;
+    position: relative;
+    z-index: 4;
+}
+.computerChoiceContainer p{
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+    font-size: 17px;
+}
+.green1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 19px;
+    left: -30px;
+    border-radius: 50%;
+    border:32px solid #279B27;
+    z-index: 3;
+    visibility: hidden;
+
+}
+.green2{
+    border: 2px solid red;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: -5px;
+    left: -55px;
+    border-radius: 50%;
+    border:35px solid #32A62F;
+    z-index: 2;
+    visibility: hidden;
+}
+.green3{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -31px;
+    left: -80px;
+    border-radius: 50%;
+    border:35px solid #66B248;
+    z-index: 1;
+    visibility: hidden;
+}
+.logo {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.handContent {
+  position: relative;
+  z-index: 2;
+  font-size: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rockImage{
+    width: 80px;
+    height: 58px;
+}
+.paperImage{
+    width: 72px;
+    height: 72px;
+}
+.scissorImage{
+    width: 37px;
+    height: 53.5px;
+}
+.rockContainer {
+  top: 0;
+  left: 0;
+  border: 16px solid #0074B6;
+  background-color: white;
+}
+.scissorContainer {
+  top: 0;
+  right: 0;
+  background-color: white;
+  border: 16px solid #BD00FF;
+}
+.paperContainer {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border:16px solid #FFA943;
+  background-color: white;
+}
+.connection {
+  position: absolute;
+  background-color: #000000A3;
+  z-index: 1;
+  height: 15px;
+}
+.rockPaper {
+  width: 140px;
+  top: 40px;
+  left: 80px;
+  z-index: 0;
+}
+.rockScissor {
+    width: 156px;
+    transform: rotate(60deg);
+    top: 132px;
+    left: 11px;
+    z-index: 0;
+}
+.paperScissor {
+    width: 156px;
+    transform: rotate(-60deg);
+    top: 132px;
+    right: 11px;
+    z-index: 0;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="mainScoreContainer">
+            <div class="contentContainer">
+
+                <div class="headingContainer">
+                    <div class="headingElementsContainer">
+                        <h2>R O C K</h2>
+                        <h2>P A P E R</h2>
+                        <h2>S C I S S O R</h2>
+                    </div>
+                </div>
+                <div class="scoreContainer">
+                    <div class="computerScoreContainer">
+                        <p class="computerScoreText">COMPUTER SCORE</p>
+                        <p class="scores" id="pcScore">0</p>
+                    </div>
+                    <div class="userScoreContainer">
+                        <p class="userScoreText">YOUR SCORE</p>
+                        <p class="scores" id="userScore">0</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="choiceRulesContainer">
+
+            <div class="choiceContainer" id="choiceContainer">
+                <div class="playContainer" id="playContainer">
+                    <div class="connection rockPaper"></div>
+                    <div class="connection rockScissor"></div>
+                    <div class="connection paperScissor"></div>
+
+                    <div class="logo rockContainer">
+                        <div class="handContent" onclick="handleUserPlayed(1)">
+                            <img src="./images/rock.png" alt="" class="rockImage">
+                        </div>
+                    </div>
+
+                    <div class="logo scissorContainer">
+                        <div class="handContent" onclick="handleUserPlayed(3)">
+                            <img src="./images/scissor.png" alt="" class="scissorImage">
+                        </div>
+                        
+                    </div>
+
+                    <div class="logo paperContainer">
+                        <div class="handContent"  onclick="handleUserPlayed(2)">
+                            <img src="./images/paper.png" alt="" class="paperImage">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wonStatusContainer hidden" id="wonStatusContainer">
+                    <div class="userChoiceContainer">
+                        <p>YOU PICKED</p>
+                        <div class="green1" id="green1"></div>
+                        <div class="green2" id="green2"></div>
+                        <div class="green3" id="green3"></div>
+                        <div class="rockContainer" id="userPickedElement" style="width: 140px; height: 140px; display: flex;justify-content: center;align-items: center;border-radius: 50%;">
+                            <div class="handContent">
+                                <img src="./images/rock.png" alt="" class="rockImage" id="userPickedImage">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="playAgainContainer">
+                        <p class="wonMessage" id="wonMessage">YOU WON</p>
+                        <p class="againstPCText" id="againstPCText">AGAINST PC</p>
+                        <button class="playAgainButton" onclick="handlePlayAgain()" id="playAgainButton">PLAY AGAIN</button>
+                    </div>
+                    <div class="computerChoiceContainer">
+                        <p>PC PICKED</p>
+                        <div class="green1" id="green4"></div>
+                        <div class="green2" id="green5"></div>
+                        <div class="green3" id="green6"></div>
+                        <div class="scissorContainer" id="pcPickedElement" style="width: 140px; height: 140px; display: flex;justify-content: center;align-items: center;border-radius: 50%;">
+                            <div class="handContent">
+                                <img src="./images/scissor.png" alt="" class="scissorImage" id="pcPickedImage">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+        <div class="rulesContent">
+            <div class="rulesContainer" id="rulesContainer">
+            <div class="card">
+                <div class="closeButton" onclick="handleToggleRules(1)">X</div>
+                <div class="card-header">Game Rules</div>
+                
+                <div class="ruleItem">
+                  <div class="bullet">
+                    <p style="visibility: hidden;">1</p>
+                  </div>
+                  <p>Rock beats scissors, scissors beat paper, and paper beats rock.</p>
+                </div>
+                
+                <div class="ruleItem">
+                  <div class="bullet">
+                    <p style="visibility: hidden;">1</p>
+                  </div>
+                  <p>Agree ahead of time whether you'll count off "rock, paper, scissors, shoot" or just "rock, paper, scissors.</p>
+                </div>
+                
+                <div class="ruleItem">
+                  <div class="bullet">
+                    <p style="visibility: hidden;">1</p>
+                  </div>
+                  <p>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</p>
+                </div>
+                
+                <div class="ruleItem">
+                  <div class="bullet">
+                    <p style="visibility: hidden;">1</p>
+                  </div>
+                  <p>If both players lay down the same hand, each player lays down another hand.</p>
+                </div>
+            </div>
+            </div>
+            <div class="rulesButtonContainer">
+                <button class="rulesButton"  onclick="handleToggleRules(0)">RULES</button>
+                <a href="./congratulations.html">
+                    <button class="rulesButton hidden" id="nextButton">NEXT</button>
+                </a>
+            </div>
+        </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
