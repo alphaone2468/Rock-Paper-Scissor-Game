@@ -14,7 +14,6 @@ A fun and interactive **Rock Paper Scissors** game where you play against the co
 ## 🌐 Live Demo
 
 👉 [Play the Game Here](https://alphaone2468.github.io/Rock-Paper-Scissor-Game/)  
-> Replace this with your actual deployed URL (GitHub Pages, Vercel, Netlify, etc.)
 
 ## 🛠️ Tech Stack
 
