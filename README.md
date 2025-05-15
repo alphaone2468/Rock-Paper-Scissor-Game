@@ -1,5 +1,5 @@
 # ✊🖐✌️ Rock Paper Scissors Game
-# ✊🖐✌️ Rock Paper Scissors Game
+
 
 A fun and interactive **Rock Paper Scissors** game where you play against the computer. The game tracks your score and stores it in the browser's **local storage**, so your progress is saved even if you refresh the page.
 
