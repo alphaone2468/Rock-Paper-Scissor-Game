@@ -21,12 +21,3 @@ A fun and interactive **Rock Paper Scissors** game where you play against the co
 - **Frontend:** HTML, CSS, JavaScript  
 - **Storage:** LocalStorage (Browser)
 
-## 📦 Installation
-
-To run this project locally:
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/yourusername/rock-paper-scissors.git
-   cd rock-paper-scissors
